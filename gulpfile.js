@@ -27,6 +27,7 @@ const {
 } = require('fs');
 const typograf = require('gulp-typograf');
 const webp = require('gulp-webp');
+const avif = require('gulp-avif');
 const mainSass = gulpSass(sass);
 const webpackStream = require('webpack-stream');
 const plumber = require('gulp-plumber');
@@ -236,6 +237,12 @@ const images = () => {
 const webpImages = () => {
   return src([`${paths.srcImgFolder}/**/**.{jpg,jpeg,png}`])
     .pipe(webp())
+    .pipe(dest(paths.buildImgFolder))
+};
+
+const avifImages = () => {
+  return src([`${paths.srcImgFolder}/**/**.{jpg,jpeg,png}`])
+    .pipe(avif())
     .pipe(dest(paths.buildImgFolder))
 };
 

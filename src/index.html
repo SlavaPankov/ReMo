@@ -4,9 +4,15 @@
 @include('partials/head.html')
 
 <body class="page__body">
-  <div class="site-container">
+  <div class="site-container" style="max-height: 100vh;" data-simplebar>
     @include('partials/header.html')
+    <main>
+      @include('partials/welcome.html')
+      @include('partials/about.html')
+      @include('partials/maintenance.html')
+    </main>
     @include('partials/footer.html')
+    @include('partials/burger.html')
   </div>
 </body>
 

@@ -20,7 +20,13 @@ html {
   min-width: 320px;
   min-height: 100%;
   font-size: 16px;
+  overflow: hidden;
 }
+
+.site-container {
+  overflow: auto;
+}
+
 
 img {
   height: auto;
@@ -64,6 +70,11 @@ a {
   }
 }
 
+.heading-reset {
+  margin: 0;
+  padding: 0;
+}
+
 .visually-hidden {
   position: absolute;
   overflow: hidden;
@@ -90,11 +101,52 @@ a {
 }
 
 .dis-scroll {
-  position: relative;
   overflow: hidden;
   height: 100vh;
   position: fixed;
   left: 0;
   top: 0;
   width: 100%;
+}
+
+.simplebar-vertical {
+  top: 120px !important;
+  right: 0 !important;
+  width: 135px !important;
+  background-color: transparent;
+  overflow: visible !important;
+  opacity: 1;
+  border-left: 1px solid $scroll-gray;
+}
+
+.simplebar-scrollbar {
+  width: 3px !important;
+  right: 1.5px !important;
+
+  &::before {
+    width: 3px !important;
+    opacity: 1 !important;
+    top: 0 !important;
+    bottom: 0 !important;
+    left: -2.5px !important;
+    right: auto !important;
+    background-color: $scroll-gray !important;
+
+  }
+}
+
+.overflow {
+  overflow-y: hidden !important;
+}
+
+.opened {
+  transform: none !important;
+}
+
+.z-index-1 {
+  z-index: - 1 !important;
+}
+
+.simplebar-content-wrapper {
+  scroll-behavior: smooth !important;
 }

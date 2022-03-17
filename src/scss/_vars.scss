@@ -1,4 +1,15 @@
-  $font-family: "Open Sans", sans-serif;
-  $content-width: 1170px;
-  $container-offset: 15px;
-  $container-width: calc($content-width + ($container-offset) * 2);
+$font-family: "Roboto", sans-serif;
+$content-width: 1620px;
+$container-offset: 15px;
+$container-width: $content-width + ($container-offset * 2);
+
+// Colors
+
+$black: #000;
+$dark-gray: #313030;
+$gray-95: rgba(120, 120, 120, 0.95);
+$gray: #605f5f;
+$white: #fff;
+$blue: #007cc6;
+$scroll-gray: #9e9898;
+$scroll-gray-38: rgba(158, 152, 152, 0.38);

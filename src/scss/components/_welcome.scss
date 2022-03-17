@@ -1,0 +1,44 @@
+.welcome {
+  background: url("../img/welcome-background.webp") no-repeat transparent;
+  background-size: cover;
+
+  &__container {
+    padding: 285px 160px 323px 160px;
+  }
+
+  &__heading {
+    @include ff-Cormorant;
+    font-size: 200px;
+    line-height: 200px;
+    font-weight: 400;
+    letter-spacing: 0.16em;
+    color: $blue;
+    text-transform: uppercase;
+  }
+
+  &__text {
+    @include ff-Roboto;
+    font-size: 50px;
+    line-height: 59px;
+    font-weight: 500;
+    letter-spacing: .16em;
+    color: $white;
+    text-transform: none;
+  }
+
+  &__logo {
+    margin-bottom: 5px;
+    padding-right: 50px;
+    font-size: 150px;
+    line-height: 115px;
+    font-weight: 300;
+    color: $white;
+    text-align: right;
+  }
+
+  &__image {
+    transform: translateX(-35px);
+  }
+
+
+}
