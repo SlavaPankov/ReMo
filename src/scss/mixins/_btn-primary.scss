@@ -1,5 +1,6 @@
 @mixin btn-primary {
   display: block;
+  max-width: 360px;
   margin: 0 auto;
   padding: 34px 75px;
   font-size: 20px;
@@ -8,4 +9,6 @@
   color: $white;
   letter-spacing: .03em;
   background-color: $blue;
+  text-transform: uppercase;
+  text-align: center;
 }

@@ -1,0 +1,30 @@
+.question {
+  background: url('../img/question-background.webp') center bottom no-repeat transparent;
+  &__container {
+    padding-top: 140px;
+    padding-bottom: 140px;
+  }
+
+  &__heading {
+    font-size: 40px;
+    line-height: 45px;
+    font-weight: 700;
+    color: $dark-gray;
+    text-transform: uppercase;
+    text-align: center;
+  }
+
+  &__subtitle {
+    margin-bottom: 47px;
+    font-size: 30px;
+    line-height: 35px;
+    font-weight: 300;
+    color: $dark-gray;
+    text-transform: uppercase;
+    text-align: center;
+  }
+
+  &__btn {
+    @include btn-primary;
+  }
+}
