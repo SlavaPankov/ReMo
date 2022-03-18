@@ -10,5 +10,7 @@ export default {
   burgerClassesZIndex: 'z-index-1',
   burgerClassesWithoutBorder: 'without-border',
   burgerClassesBtnOpen: 'burger-open',
-  burgerClassesLine: 'line-down'
+  burgerClassesLine: 'line-down',
+  tabsBtn: document.querySelectorAll('.category-list__title'),
+  tabsActiveClass: 'is-active',
 }

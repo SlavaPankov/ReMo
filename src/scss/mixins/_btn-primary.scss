@@ -1,0 +1,11 @@
+@mixin btn-primary {
+  display: block;
+  margin: 0 auto;
+  padding: 34px 75px;
+  font-size: 20px;
+  line-height: 23px;
+  font-weight: 700;
+  color: $white;
+  letter-spacing: .03em;
+  background-color: $blue;
+}

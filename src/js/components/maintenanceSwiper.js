@@ -4,7 +4,6 @@ import Swiper, { Pagination } from "swiper";
 import 'swiper/css'
 
 // modules styles
-import 'swiper/css/navigation'
 import 'swiper/css/pagination'
 
 Swiper.use([Pagination]);

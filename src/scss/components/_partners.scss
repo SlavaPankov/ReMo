@@ -1,0 +1,16 @@
+.partners {
+  &__container {
+    max-width: 1410px;
+    padding-top: 86px;
+    padding-bottom: 86px;
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 75px 157px;
+    background-color: $gray-35;
+  }
+}

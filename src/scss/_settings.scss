@@ -88,7 +88,7 @@ a {
 
 .container {
   margin: 0 auto;
-  padding: 0 $container-offset;
+  padding: 0 0 0 $container-offset;
   max-width: $container-width;
 }
 
@@ -149,4 +149,224 @@ a {
 
 .simplebar-content-wrapper {
   scroll-behavior: smooth !important;
+}
+
+.wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transition-duration: 366ms;
+  z-index: 9993;
+
+  &__bg {
+    background: #1e1e1e;
+    opacity: 0;
+    transition-duration: inherit;
+    transition-property: opacity;
+    transition-timing-function: cubic-bezier(.47,0,.74,.71);
+  }
+
+  &__bg, &__inner, &__stage {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  &__stage {
+    overflow: hidden;
+    direction: ltr;
+    z-index: 99994;
+    transform: translateZ(0);
+  }
+
+  &__slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: auto;
+    outline: none;
+    white-space: normal;
+    box-sizing: border-box;
+    text-align: center;
+    z-index: 99994;
+    display: none;
+    backface-visibility: hidden;
+    transition-property: transform,opacity,-webkit-transform;
+    transform-style: preserve-3d;
+  }
+}
+
+.wrapper-slide--current {
+  display: block;
+}
+
+.wrapper .modal-is-open {
+  opacity: .87;
+  transition-timing-function: cubic-bezier(.22,.61,.36,1);
+}
+
+.modal {
+  overflow: initial;
+  position: absolute;
+  left: 50%;
+  top: 75px;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 1055px;
+  padding: 85px 64px 75px;
+  background-color: $white;
+
+  &__heading, &__descr {
+    font-size: 20px;
+    line-height: 23px;
+    font-weight: 700;
+    color: $dark-gray;
+    text-transform: uppercase;
+    letter-spacing: .03em;
+    text-align: center;
+  }
+
+  &__descr {
+    margin-bottom: 31px;
+    font-weight: 300;
+  }
+
+  &__sign {
+    margin-bottom: 6px;
+    font-size: 14px;
+    line-height: 21px;
+    font-weight: 400;
+    color: $black;
+  }
+
+  &__close {
+    position: absolute;
+    top: 40px;
+    right: 40px;
+    width: 44px;
+    height: 44px;
+    padding: 0;
+    margin: 0;
+    border: 0;
+    border-radius: 0;
+    outline: none;
+    background: transparent;
+    z-index: 10;
+    cursor: pointer;
+
+    &::after, &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 50%;
+      width: 2px;
+      height: 100%;
+      transform: translateX(-50%) rotate(45deg);
+      background-color: $black;
+    }
+
+    &::before {
+      transform: translateX(-50%) rotate(-45deg);
+    }
+  }
+}
+
+.wrapper-slide--current>* {
+  position: relative;
+  border-width: 0;
+  vertical-align: middle;
+  text-align: left;
+  background-color: #fff;
+  overflow: initial;
+  box-sizing: border-box;
+}
+
+.overflow {
+  overflow: hidden;
+}
+
+.just-validate-error-label {
+  padding-left: 25px;
+  margin-bottom: 5px;
+  font-size: 12px;
+  line-height: 14px;
+  font-weight: 400;
+}
+
+.message {
+  display: flex;
+  flex-direction: column;
+
+  &__heading {
+    margin-bottom: 15px;
+    font-size: 30px;
+    line-height: 35px;
+    font-weight: 700;
+    color: $black;
+    text-align: center;
+  }
+
+  &__subscribe {
+    text-align: center;
+    font-size: 20px;
+    line-height: 25px;
+    font-weight: 400;
+    color: $black;
+  }
+}
+
+.form-callback {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 682px;
+
+  &__label {
+    width: 100%;
+    display: flex;
+    flex-direction: column-reverse;
+    margin-bottom: 10px;
+  }
+
+  &__input {
+    padding: 25px 75px;
+    font-size: 20px;
+    line-height: 24px;
+    font-weight: 400;
+    color: $dark-gray;
+    background-color: $gray-64;
+    border: none;
+  }
+
+  &__btn {
+    @include btn-primary;
+
+  }
+
+  &__policy {
+    margin-bottom: 50px;
+    font-size: 15px;
+    line-height: 17px;
+    font-weight: 400;
+    color: $dark-gray-63;
+  }
+
+  &__confidential {
+    text-decoration: underline;
+  }
+}
+
+.modal-policy {
+  max-width: calc(100% - 30px);
+  margin: 0 auto;
 }
