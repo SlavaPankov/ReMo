@@ -1,5 +1,6 @@
 import vars from '../_vars';
 
+// Открытие закрытие меню
 vars.burgerBtn.addEventListener('click' ,() => {
   const scrollWrapper = document.querySelector('.simplebar-content-wrapper');
   const scrollBar = document.querySelector('.simplebar-vertical');
@@ -9,4 +10,17 @@ vars.burgerBtn.addEventListener('click' ,() => {
   vars.burgerLine.classList.toggle(vars.burgerClassesLine);
   scrollWrapper.classList.toggle(vars.burgerClassesOverflow);
   scrollBar.classList.toggle(vars.burgerClassesZIndex);
+});
+
+// Dropdown в бургер
+
+vars.dropdownBtn.forEach(item => {
+  item.addEventListener('click', () => {
+    vars.dropdownMenu.forEach(elem => {
+      if(elem.dataset.target === item.dataset.path) {
+        elem.classList.toggle('is-open');
+        item.classList.toggle('rotate');
+      }
+    });
+  });
 });

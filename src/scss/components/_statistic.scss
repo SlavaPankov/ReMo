@@ -5,6 +5,11 @@
     max-width: 1410px;
     padding-top: 246px;
     padding-bottom: 250px;
+
+    @include big-desktop {
+      max-width: 1060px;
+      padding: 170px 0;
+    }
   }
 
   &__list {
@@ -15,12 +20,17 @@
   }
 
   &__numeric {
-    //margin-bottom: 30px;
     font-size: 100px;
     line-height: 117px;
     font-weight: 700;
     color: $white;
     letter-spacing: .03em;
+
+    @include big-desktop {
+      font-size: 80px;
+      line-height: 93px;
+      text-align: center;
+    }
   }
 
   &__dlc {
@@ -28,7 +38,12 @@
     font-size: 50px;
     line-height: 58px;
     font-weight: 700;
-    transform: translateX(-35px);
+    transform: translateX(-25px);
+
+    @include big-desktop {
+      font-size: 30px;
+      line-height: 35px;
+    }
   }
 
   &__descr {
@@ -40,5 +55,10 @@
     letter-spacing: .03em;
     text-transform: uppercase;
     text-align: center;
+
+    @include big-desktop {
+      font-size: 18px;
+      line-height: 21px;
+    }
   }
 }

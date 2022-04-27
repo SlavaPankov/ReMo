@@ -2,6 +2,7 @@
   &__container {
     padding-top: 40px;
     padding-bottom: 80px;
+    max-width: calc(100% - 200px);
   }
 
   &__heading {
@@ -12,6 +13,12 @@
     color: $dark-gray;
     text-transform: uppercase;
     text-align: center;
+
+    @include big-desktop {
+      margin-bottom: 50px;
+      font-size: 40px;
+      line-height: 49px;
+    }
   }
 
   &__slide {
@@ -21,6 +28,10 @@
     align-items: center;
     justify-content: center;
     transition: width .3s ease-in-out, height .3s ease-in-out;
+
+    @include big-desktop {
+      height: 539px !important;
+    }
   }
 
   &__descr {
@@ -29,6 +40,11 @@
     font-weight: 400;
     color: $white;
     text-transform: uppercase;
+
+    @include big-desktop {
+      font-size: 20px;
+      line-height: 23px;
+    }
   }
 
   &__strong {
@@ -45,10 +61,18 @@
 
   &__slide-next {
     height: 745px !important;
+
+    @include big-desktop {
+      height: 570px !important;
+    }
   }
 
   &__descr-1 {
     padding: 0 53px;
+
+    @include big-desktop {
+      padding: 0 61px;
+    }
   }
   &__descr-2 {
     padding: 0 41px;

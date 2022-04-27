@@ -117,6 +117,10 @@ a {
   overflow: visible !important;
   opacity: 1;
   border-left: 1px solid $scroll-gray;
+
+  @include big-desktop {
+    width: 100px !important;
+  }
 }
 
 .simplebar-scrollbar {

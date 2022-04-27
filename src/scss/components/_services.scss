@@ -3,6 +3,10 @@
     padding-top: 70px;
     padding-bottom: 60px;
     max-width: 1410px;
+
+    @include big-desktop {
+      max-width: 1060px;
+    }
   }
 
   &__heading {
@@ -46,6 +50,10 @@
 
   &__item:not(:last-child) {
     margin-right: 50px;
+
+    @include big-desktop {
+      margin-right: 61px;
+    }
   }
 
   &__item {
@@ -61,6 +69,11 @@
     font-weight: 300;
     color: $dark-gray;
     cursor: pointer;
+
+    @include big-desktop {
+      font-size: 20px;
+      line-height: 23px;
+    }
   }
 
   &__underline {
@@ -70,6 +83,10 @@
     margin-top: auto;
     background-color: $scroll-gray;
     transition: background-color .3s ease-in-out;
+
+    @include big-desktop {
+      width: 67.5px;
+    }
   }
 }
 
@@ -90,10 +107,17 @@
   padding: 45px 31px;
   display: flex;
   flex-direction: column;
-  //align-items: flex-start;
+
+  @include big-desktop {
+    padding: 20px 23px;
+  }
 
   &__image {
     margin-bottom: 26px;
+
+    @include big-desktop {
+      margin-bottom: 20px;
+    }
   }
 
   &__heading {
@@ -103,6 +127,12 @@
     font-weight: 700;
     color: $white;
     text-transform: uppercase;
+
+    @include big-desktop {
+      margin-bottom: 12px;
+      font-size: 25px;
+      line-height: 29px;
+    }
   }
 
   &__descr {
@@ -110,6 +140,11 @@
     line-height: 23px;
     font-weight: 300;
     color: $white;
+
+    @include big-desktop {
+      font-size: 17px;
+      line-height: 20px;
+    }
   }
 
   &__btn {
@@ -119,6 +154,11 @@
     margin-top: auto;
     border-radius: 100%;
     background-color: $light-gray;
+
+    @include big-desktop {
+      width: 44px;
+      height: 44px;
+    }
 
     &::after {
       content: '';
@@ -130,6 +170,11 @@
       height: 10px;
       border-bottom: 3px solid $dark-gray;
       border-right: 3px solid $dark-gray;
+
+      @include big-desktop {
+        width: 6px;
+        height: 6px;
+      }
     }
   }
 }

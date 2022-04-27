@@ -5,6 +5,13 @@
               url('../img/3-license.webp') left 135px bottom no-repeat;
   background-size: 360px 433px, 765px 476px, 778px 476px;
 
+  @include big-desktop {
+    background: url("../img/1-license.webp") left 100px top no-repeat,
+                url('../img/2-license.webp') right 100px top no-repeat,
+                url('../img/3-license.webp') left 100px bottom no-repeat;
+    background-size: 274px 363px, 514px 400px, 673px 377px;
+  }
+
   ::after {
     content: '';
     position: absolute;
@@ -14,16 +21,21 @@
     height: 745px;
     background-color: $blue;
     z-index: -1;
+
+    @include big-desktop {
+      top: 76px;
+      height: 597px;
+    }
   }
 
   &::before {
     content: '';
     position: absolute;
-    bottom: 0;
+    bottom: -1px;
     left: 0;
     width: 100%;
     height: 134px;
-    background-color: $dark-gray;
+    background-color: $black;
     z-index: -1;
   }
 
@@ -32,6 +44,10 @@
     padding-bottom: 237px;
     display: grid;
     grid-template-columns: repeat(12, 1fr);
+
+    @include big-desktop {
+      padding-bottom: 200px;
+    }
   }
 
   &__heading {
@@ -44,12 +60,15 @@
     color: $white;
     text-transform: uppercase;
     letter-spacing: .03em;
+
+    @include big-desktop {
+      grid-area: 2 / 8 / 3 / 11;
+    }
   }
 
   &__quote {
     grid-area: 1 / 4 / 2 / 7;
     max-width: 400px;
-    //padding-left: 30px;
     margin-bottom: 158px;
     @include ff-Cormorant;
     font-size: 30px;
@@ -57,6 +76,12 @@
     font-weight: 700;
     color: $white;
     text-transform: uppercase;
+
+    @include big-desktop {
+      margin-bottom: 110px;
+      font-size: 25px;
+      line-height: 29px;
+    }
   }
 
   &__author {
@@ -65,6 +90,12 @@
     font-size: 20px;
     line-height: 25px;
     text-align: right;
+
+    @include big-desktop {
+      margin-top: 0;
+      font-size: 18px;
+      line-height: 21px;
+    }
   }
 
   &__link {
@@ -76,6 +107,10 @@
     transform: translateX(-10px);
     background-color: $light-gray;
     border-radius: 100%;
+
+    @include big-desktop {
+      grid-area: 2 / 11 / 3 / 12;
+    }
 
     &::after {
       content: "";

@@ -3,6 +3,10 @@
     max-width: 1410px;
     padding-top: 86px;
     padding-bottom: 86px;
+
+    @include big-desktop {
+      max-width: 1060px;
+    }
   }
 
   &__list {
@@ -12,5 +16,34 @@
     justify-content: space-between;
     padding: 75px 157px;
     background-color: $gray-35;
+
+    @include big-desktop {
+      padding: 88px 110px;
+    }
+  }
+
+  &__image-1 {
+    @include big-desktop {
+      max-width: 75px;
+      max-height: 30px;
+    }
+  }
+  &__image-2 {
+    @include big-desktop {
+      max-width: 139px;
+      max-height: 56px;
+    }
+  }
+  &__image-3 {
+    @include big-desktop {
+      max-width: 84px;
+      max-height: 53px;
+    }
+  }
+  &__image-4 {
+    @include big-desktop {
+      max-width: 158px;
+      max-height: 21px;
+    }
   }
 }

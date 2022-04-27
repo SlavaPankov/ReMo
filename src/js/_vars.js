@@ -1,5 +1,7 @@
 export default {
   siteContainer: document.querySelector('.site-container'),
+  dropdownBtn: document.querySelectorAll('.nav__dropdown'),
+  dropdownMenu: document.querySelectorAll('.nav__down'),
   burgerBtn: document.querySelector('.burger'),
   burgerLine: document.querySelector('.burger__line'),
   burgerMenu: document.querySelector('.nav'),

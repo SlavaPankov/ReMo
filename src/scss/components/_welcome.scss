@@ -1,12 +1,23 @@
 .welcome {
-  background: url("../img/welcome-background.webp") no-repeat transparent;
-  background-size: cover;
+  background: url("../img/welcome-background.webp") center bottom  no-repeat $black;
+  background-size: contain;
+
+  @include big-desktop {
+    background: url("../img/welcome-background-1440.webp") center bottom no-repeat $black;
+    background-size: contain;
+
+  }
 
   &__container {
-    padding: 285px 160px 323px 160px;
+    padding: 285px 160px 323px 100px;
+
+    @include big-desktop {
+      padding-bottom: 270px;
+    }
   }
 
   &__heading {
+    text-align: right;
     @include ff-Cormorant;
     font-size: 200px;
     line-height: 200px;
@@ -14,6 +25,10 @@
     letter-spacing: 0.16em;
     color: $blue;
     text-transform: uppercase;
+
+    @include big-desktop {
+      font-size: 180px;
+    }
   }
 
   &__text {
@@ -28,17 +43,27 @@
 
   &__logo {
     margin-bottom: 5px;
-    padding-right: 50px;
     font-size: 150px;
     line-height: 115px;
     font-weight: 300;
     color: $white;
     text-align: right;
+
   }
 
-  &__image {
-    transform: translateX(-35px);
+  &__name {
+    display: inline-block;
+    transform: translateX(35px);
   }
 
-
+  &__subscribe {
+    display: block;
+    font-size: 16.85px;
+    line-height: 21px;
+    font-weight: 500;
+    letter-spacing: .16em;
+    color: $gray-E5;
+    text-transform: uppercase;
+    font-feature-settings: 'tnum' on, 'lnum' on;
+  }
 }

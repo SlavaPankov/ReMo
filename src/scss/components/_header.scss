@@ -6,6 +6,10 @@
   height: 100vh;
   z-index: 9999;
 
+  @include big-desktop {
+    width: 100px;
+  }
+
 
   &__container {
     height: 100vh;
@@ -72,7 +76,7 @@
   align-items: flex-start;
   width: 524px;
   height: 100vh;
-  padding: 10vh 142px 0;
+  padding: 10vh 142px;
   background-color: $white;
   z-index: 9998;
   transition: transform .3s ease-in-out;
@@ -93,9 +97,15 @@
     color: $dark-gray;
     letter-spacing: .03em;
     text-transform: uppercase;
+
+    @include big-desktop {
+      font-size: 25px;
+      line-height: 29px;
+    }
   }
 
   &__dropdown {
+    position: relative;
     margin-bottom: 15px;
     font-size: 20px;
     line-height: 23px;
@@ -103,19 +113,58 @@
     color: $dark-gray;
     letter-spacing: .03em;
     text-transform: uppercase;
+    cursor: pointer;
+
+    @include big-desktop {
+      font-size: 17px;
+      line-height: 21px;
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      right: -20px;
+      top: 35%;
+      transform: translateY(-50%) rotate(45deg);
+      width: 10px;
+      height: 10px;
+      border-bottom: 2px solid $dark-gray;
+      border-right: 2px solid $dark-gray;
+      transition: transform .3s ease-in-out;
+    }
   }
 
-  &__sales {
-    margin-bottom: 158px;
+  .rotate {
+    &::after {
+      transform: rotate(225deg);
+    }
+  }
+
+  &__schedule, &__tel {
+    font-size: 20px;
+    line-height: 25px;
+    font-weight: 300;
+    color: $dark-gray;
+  }
+
+  &__schedule {
+    margin-bottom: 6px;
   }
 
   &__down {
     display: none;
+    margin-bottom: 10px;
   }
 }
 
-.nav__social {
+.is-open {
+  display: block;
+  animation-name: dropdownOpen;
+  animation-duration: .3s;
+}
 
+.nav__social {
+  margin-top: auto;
   align-self: center;
 
   &-list {
@@ -141,4 +190,22 @@
 
 .line-down {
   transform: translateX(14px);
+}
+
+@keyframes dropdownOpen {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes dropdownClose {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
 }

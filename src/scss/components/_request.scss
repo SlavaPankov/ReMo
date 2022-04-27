@@ -1,9 +1,14 @@
 .request {
-  background-color: $dark-gray;
+  background-color: $black;
 
   &__container {
     padding-top: 136px;
     padding-bottom: 178px;
+
+    @include big-desktop {
+      padding-top: 120px;
+      padding-bottom: 150px;
+    }
   }
 
   &__heading {
@@ -14,6 +19,11 @@
     letter-spacing: .03em;
     text-transform: uppercase;
     text-align: center;
+
+    @include big-desktop {
+      font-size: 30px;
+      line-height: 39px;
+    }
   }
 
   &__subheading {
@@ -24,6 +34,11 @@
     text-transform: uppercase;
     font-weight: 300;
     text-align: center;
+
+    @include big-desktop {
+      font-size: 25px;
+      line-height: 29px;
+    }
   }
   &__btn {
     @include btn-primary;

@@ -11,4 +11,11 @@
   background-color: $blue;
   text-transform: uppercase;
   text-align: center;
+
+  @include big-desktop {
+    max-width: 270px;
+    padding: 25px 43px;
+    font-size: 18px;
+    line-height: 21px;
+  }
 }

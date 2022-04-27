@@ -3,6 +3,11 @@
   &__container {
     padding-top: 140px;
     padding-bottom: 140px;
+
+    @include big-desktop {
+      padding-top: 120px;
+      padding-bottom: 160px;
+    }
   }
 
   &__heading {
@@ -12,6 +17,11 @@
     color: $dark-gray;
     text-transform: uppercase;
     text-align: center;
+
+    @include big-desktop {
+      font-size: 30px;
+      line-height: 39px;
+    }
   }
 
   &__subtitle {
@@ -22,6 +32,11 @@
     color: $dark-gray;
     text-transform: uppercase;
     text-align: center;
+
+    @include  big-desktop {
+      font-size: 25px;
+      line-height: 29px;
+    }
   }
 
   &__btn {
