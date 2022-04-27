@@ -14,6 +14,12 @@
     @include big-desktop {
       padding-bottom: 270px;
     }
+
+    @include big-tablet {
+      padding-top: 230px;
+      padding-bottom: 150px;
+      padding-left: 50px;
+    }
   }
 
   &__heading {
@@ -28,6 +34,11 @@
 
     @include big-desktop {
       font-size: 180px;
+    }
+
+    @include big-tablet {
+      font-size: 150px;
+      line-height: 180px;
     }
   }
 
@@ -49,6 +60,9 @@
     color: $white;
     text-align: right;
 
+    @include big-tablet {
+      font-size: 125px;
+    }
   }
 
   &__name {
@@ -65,5 +79,15 @@
     color: $gray-E5;
     text-transform: uppercase;
     font-feature-settings: 'tnum' on, 'lnum' on;
+
+    @include big-tablet {
+      font-size: 13.3px;
+      line-height: 20px;
+    }
+  }
+
+  &__image {
+    width: 60px;
+    height: 60px;
   }
 }

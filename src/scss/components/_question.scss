@@ -22,6 +22,11 @@
       font-size: 30px;
       line-height: 39px;
     }
+
+    @include big-tablet {
+      font-size: 25px;
+      line-height: 29px;
+    }
   }
 
   &__subtitle {
@@ -36,6 +41,11 @@
     @include  big-desktop {
       font-size: 25px;
       line-height: 29px;
+    }
+
+    @include big-tablet {
+      font-size: 20px;
+      line-height: 24px;
     }
   }
 

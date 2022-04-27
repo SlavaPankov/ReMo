@@ -7,6 +7,10 @@
     @include big-desktop {
       max-width: 1060px;
     }
+
+    @include big-tablet {
+      max-width: calc(100% - 280px);
+    }
   }
 
   &__list {

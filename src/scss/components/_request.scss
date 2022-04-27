@@ -9,6 +9,10 @@
       padding-top: 120px;
       padding-bottom: 150px;
     }
+
+    @include big-tablet {
+      max-width: calc(100% - 200px);
+    }
   }
 
   &__heading {
@@ -24,6 +28,11 @@
       font-size: 30px;
       line-height: 39px;
     }
+
+    @include  big-tablet {
+      font-size: 25px;
+      line-height: 29px;
+    }
   }
 
   &__subheading {
@@ -38,6 +47,11 @@
     @include big-desktop {
       font-size: 25px;
       line-height: 29px;
+    }
+
+    @include big-tablet {
+      font-size: 20px;
+      line-height: 24px;
     }
   }
   &__btn {

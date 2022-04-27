@@ -7,6 +7,10 @@
     @include big-desktop {
       max-width: 1060px;
     }
+
+    @include big-tablet {
+      max-width: calc(100% - 200px);
+    }
   }
 
   &__heading {
@@ -17,6 +21,16 @@
     color: $dark-gray;
     text-transform: uppercase;
     text-align: center;
+
+    @include big-desktop {
+      font-size: 40px;
+      line-height: 49px;
+    }
+
+    @include big-tablet {
+      font-size: 35px;
+      line-height: 44px;
+    }
   }
 
   &__slide {
@@ -26,6 +40,10 @@
   &__card {
     height: 468px !important;
     padding: 45px 31px;
+
+    @include big-tablet {
+      height: 420px !important;
+    }
   }
 
   &__swiper {
@@ -53,6 +71,10 @@
 
     @include big-desktop {
       margin-right: 61px;
+    }
+
+    @include big-tablet {
+      margin-right: 40px;
     }
   }
 
@@ -118,6 +140,11 @@
     @include big-desktop {
       margin-bottom: 20px;
     }
+
+    @include big-tablet {
+      max-width: 71px;
+      max-height: 71px;
+    }
   }
 
   &__heading {
@@ -133,6 +160,11 @@
       font-size: 25px;
       line-height: 29px;
     }
+
+    @include big-tablet {
+      font-size: 23px;
+      line-height: 27px;
+    }
   }
 
   &__descr {
@@ -144,6 +176,11 @@
     @include big-desktop {
       font-size: 17px;
       line-height: 20px;
+    }
+
+    @include big-tablet {
+      font-size: 15px;
+      line-height: 18px;
     }
   }
 
@@ -158,6 +195,11 @@
     @include big-desktop {
       width: 44px;
       height: 44px;
+    }
+
+    @include big-tablet {
+      width: 40px;
+      height: 40px;
     }
 
     &::after {

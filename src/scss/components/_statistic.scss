@@ -10,6 +10,10 @@
       max-width: 1060px;
       padding: 170px 0;
     }
+
+    @include big-tablet {
+      max-width: calc(100% - 200px);
+    }
   }
 
   &__list {
@@ -30,6 +34,11 @@
       font-size: 80px;
       line-height: 93px;
       text-align: center;
+    }
+
+    @include big-tablet {
+      font-size: 70px;
+      line-height: 83px;
     }
   }
 
@@ -59,6 +68,11 @@
     @include big-desktop {
       font-size: 18px;
       line-height: 21px;
+    }
+
+    @include big-tablet {
+      font-size: 15px;
+      line-height: 18px;
     }
   }
 }
