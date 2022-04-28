@@ -1,5 +1,10 @@
 .question {
   background: url('../img/question-background.webp') center bottom no-repeat transparent;
+
+  @include tablet {
+    background: url('../img/question-background-1024.webp') right 75px bottom no-repeat transparent;
+  }
+
   &__container {
     padding-top: 140px;
     padding-bottom: 140px;
@@ -7,6 +12,10 @@
     @include big-desktop {
       padding-top: 120px;
       padding-bottom: 160px;
+    }
+
+    @include tablet {
+      padding: 100px 0;
     }
   }
 

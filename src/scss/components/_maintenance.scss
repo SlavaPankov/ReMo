@@ -3,6 +3,10 @@
     padding-top: 40px;
     padding-bottom: 80px;
     max-width: calc(100% - 200px);
+
+    @include tablet {
+      max-width: calc(100% - 150px);
+    }
   }
 
   &__heading {
@@ -24,6 +28,11 @@
       font-size: 35px;
       line-height: 44px;
     }
+
+    @include tablet {
+      font-size: 30px;
+      line-height: 39px;
+    }
   }
 
   &__slide {
@@ -41,6 +50,10 @@
     @include big-tablet {
       height: 439px !important;
     }
+
+    @include tablet {
+      height: 371px !important;
+    }
   }
 
   &__descr {
@@ -53,6 +66,11 @@
     @include big-desktop {
       font-size: 20px;
       line-height: 23px;
+    }
+
+    @include tablet {
+      font-size: 18px;
+      line-height: 21px;
     }
   }
 
@@ -78,6 +96,10 @@
     @include big-tablet {
       height: 470px !important;
     }
+
+    @include tablet {
+      height: 404px !important;
+    }
   }
 
   &__descr-1 {
@@ -90,12 +112,20 @@
     @include big-tablet {
       padding: 0 20px;
     }
+
+    @include tablet {
+      padding: 0 8px;
+    }
   }
   &__descr-2 {
     padding: 0 41px;
 
     @include big-tablet {
       padding: 0 20px;
+    }
+
+    @include tablet {
+      padding: 0 10px;
     }
   }
   &__descr-3 {
@@ -104,12 +134,20 @@
     @include big-tablet {
       padding: 0 20px;
     }
+
+    @include tablet {
+      padding: 0 10px;
+    }
   }
   &__descr-4 {
     padding: 0 58px;
 
     @include big-tablet {
       padding: 0 20px;
+    }
+
+    @include tablet {
+      padding: 0 10px;
     }
   }
   &__descr-5 {
@@ -119,12 +157,19 @@
       padding: 0 20px;
     }
 
+    @include tablet {
+      padding: 0 10px;
+    }
   }
   &__descr-6 {
     padding: 0 56px;
 
     @include big-tablet {
       padding: 0 20px;
+    }
+
+    @include tablet {
+      padding: 0 10px;
     }
   }
 
@@ -171,6 +216,10 @@
     width: 70px;
     height: 5px;
     background-color: $scroll-gray-38;
+
+    @include tablet {
+      width: 37.5px;
+    }
   }
 
   &__bullet:not(:last-child) {

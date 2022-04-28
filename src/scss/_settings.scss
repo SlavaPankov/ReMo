@@ -121,6 +121,10 @@ a {
   @include big-desktop {
     width: 100px !important;
   }
+
+  @include tablet {
+    width: 75px !important;
+  }
 }
 
 .simplebar-scrollbar {

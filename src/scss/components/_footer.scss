@@ -11,6 +11,12 @@
     @include big-desktop {
       max-width: calc(100% - 200px);
     }
+
+    @include tablet {
+      max-width: calc(100% - 150px);
+      padding-top: 65px;
+      padding-bottom: 31px;
+    }
   }
 
   &__left {
@@ -29,6 +35,13 @@
       font-size: 25px;
       line-height: 29px;
     }
+
+    @include tablet {
+      margin-bottom: 22px;
+      font-size: 20px;
+      line-height: 24px;
+    }
+
   }
 
   &__center {
@@ -59,6 +72,11 @@
         font-size: 25px;
         line-height: 29px;
       }
+
+      @include tablet {
+        font-size: 20px;
+        line-height: 24px;
+      }
     }
   }
 
@@ -88,6 +106,10 @@
 
   &__item:not(:last-child) {
     margin-bottom: 24px;
+
+    @include tablet {
+      margin-bottom: 17px;
+    }
   }
 
   &__link, &__address {
@@ -103,6 +125,11 @@
     @include big-tablet {
       font-size: 18px;
       line-height: 22px;
+    }
+
+    @include tablet {
+      font-size: 15px;
+      line-height: 19px;
     }
   }
 
@@ -143,6 +170,10 @@
 
   &__item:not(:last-child) {
     margin-bottom: 24px;
+
+    @include tablet {
+      margin-bottom: 17px;
+    }
   }
 
   &__link {
@@ -155,11 +186,20 @@
       font-size: 18px;
       line-height: 23px;
     }
+
+    @include tablet {
+      font-size: 15px;
+      line-height: 17px;
+    }
   }
 }
 
 .about-link {
   margin-bottom: 90px;
+
+  @include tablet {
+    margin-bottom: 40px;
+  }
 }
 
 .underline {

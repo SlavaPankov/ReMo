@@ -16,6 +16,13 @@
     background-size: 195px 255px, 345px 236px, 489px 262px;
   }
 
+  @include tablet {
+    background: url("../img/1-license.webp") left 20px top no-repeat,
+                url('../img/2-license.webp') right 75px top no-repeat,
+                url('../img/3-license.webp') left 20px bottom no-repeat;
+    background-size: 195px 255px, 345px 236px, 489px 262px;
+  }
+
   ::after {
     content: '';
     position: absolute;
@@ -66,6 +73,11 @@
       padding-top: 150px;
       padding-bottom: 150px;
     }
+
+    @include tablet {
+      padding-top: 131px;
+      padding-bottom: 137px;
+    }
   }
 
   &__heading {
@@ -85,6 +97,10 @@
 
     @include big-tablet {
       grid-area: 2 / 7 / 3 / 10;
+    }
+
+    @include tablet {
+      grid-area: 2 / 7 / 3 / 11;
     }
   }
 
@@ -111,6 +127,11 @@
       font-size: 23px;
       line-height: 27px;
     }
+
+    @include tablet {
+      font-size: 20px;
+      line-height: 23px;
+    }
   }
 
   &__author {
@@ -124,6 +145,11 @@
       margin-top: 0;
       font-size: 18px;
       line-height: 21px;
+    }
+
+    @include tablet {
+      font-size: 15px;
+      line-height: 19px;
     }
   }
 
@@ -143,6 +169,10 @@
 
     @include big-tablet {
       grid-area: 2 / 10 / 3 / 11;
+    }
+
+    @include tablet {
+      grid-area: 2 / 11 / 3 / 12;
     }
 
     &::after {
