@@ -19,6 +19,12 @@
       padding-top: 87px;
       padding-bottom: 130px;
     }
+
+    @include extra-tablet {
+      max-width: calc(100% - 80px);
+      padding-top: 64px;
+      padding-bottom: 82px;
+    }
   }
 
   &__heading {
@@ -39,6 +45,11 @@
       font-size: 25px;
       line-height: 29px;
     }
+
+    @include small-tablet {
+      font-size: 18px;
+      line-height: 22px;
+    }
   }
 
   &__subheading {
@@ -58,6 +69,12 @@
     @include big-tablet {
       font-size: 20px;
       line-height: 24px;
+    }
+
+    @include tablet {
+      margin-bottom: 8px;
+      font-size: 14px;
+      line-height: 18px;
     }
   }
   &__btn {

@@ -7,6 +7,11 @@
     @include tablet {
       max-width: calc(100% - 150px);
     }
+
+    @include extra-tablet {
+      max-width: calc(100% - 80px);
+      padding-bottom: 40px;
+    }
   }
 
   &__heading {
@@ -33,6 +38,11 @@
       font-size: 30px;
       line-height: 39px;
     }
+
+    @include extra-tablet {
+      font-size: 25px;
+      line-height: 29px;
+    }
   }
 
   &__slide {
@@ -54,6 +64,10 @@
     @include tablet {
       height: 371px !important;
     }
+
+    @include extra-tablet {
+      height: 298px !important;
+    }
   }
 
   &__descr {
@@ -71,6 +85,11 @@
     @include tablet {
       font-size: 18px;
       line-height: 21px;
+    }
+
+    @include extra-tablet {
+      font-size: 14px;
+      line-height: 17px;
     }
   }
 
@@ -99,6 +118,10 @@
 
     @include tablet {
       height: 404px !important;
+    }
+
+    @include extra-tablet {
+      height: 309px !important;
     }
   }
 

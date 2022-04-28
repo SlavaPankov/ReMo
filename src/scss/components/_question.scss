@@ -2,7 +2,11 @@
   background: url('../img/question-background.webp') center bottom no-repeat transparent;
 
   @include tablet {
-    background: url('../img/question-background-1024.webp') right 75px bottom no-repeat transparent;
+    background: url('../img/question-background-1024.webp') left bottom no-repeat transparent;
+  }
+
+  @include small-tablet {
+    background: url('../img/question-background-768.webp') left bottom no-repeat transparent;
   }
 
   &__container {
@@ -16,6 +20,11 @@
 
     @include tablet {
       padding: 100px 0;
+    }
+
+    @include small-tablet {
+      padding-top: 44px;
+      padding-bottom: 75px;
     }
   }
 
@@ -36,6 +45,12 @@
       font-size: 25px;
       line-height: 29px;
     }
+
+    @include small-tablet {
+      font-size: 20px;
+      line-height: 24px;
+    }
+
   }
 
   &__subtitle {
@@ -55,6 +70,12 @@
     @include big-tablet {
       font-size: 20px;
       line-height: 24px;
+    }
+
+    @include small-tablet {
+      font-size: 14px;
+      line-height: 19px;
+      margin-bottom: 15px;
     }
   }
 

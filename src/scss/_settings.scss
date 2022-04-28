@@ -125,6 +125,10 @@ a {
   @include tablet {
     width: 75px !important;
   }
+
+  @include extra-tablet {
+    visibility: hidden !important;
+  }
 }
 
 .simplebar-scrollbar {
@@ -139,7 +143,6 @@ a {
     left: -2.5px !important;
     right: auto !important;
     background-color: $scroll-gray !important;
-
   }
 }
 
@@ -358,7 +361,6 @@ a {
 
   &__btn {
     @include btn-primary;
-
   }
 
   &__policy {

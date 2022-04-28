@@ -15,6 +15,11 @@
     @include tablet {
       max-width: calc(100% - 150px);
     }
+
+    @include extra-tablet {
+      padding-top: 40px;
+      max-width: calc(100% - 80px);
+    }
   }
 
   &__heading {
@@ -40,6 +45,12 @@
       font-size: 30px;
       line-height: 39px;
     }
+
+    @include extra-tablet {
+      margin-bottom: 33px;
+      font-size: 25px;
+      line-height: 29px;
+    }
   }
 
   &__slide {
@@ -56,6 +67,14 @@
 
     @include tablet {
       height: 400px !important;
+    }
+
+    @include extra-tablet {
+      height: 275px !important;
+    }
+
+    @include small-tablet {
+      height: 275px;
     }
   }
 
@@ -83,6 +102,18 @@
     margin-bottom: 40px;
   }
 
+  @include extra-tablet {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin-bottom: 0;
+  }
+
+  &__item {
+    @include extra-tablet {
+      margin-bottom: 30px;
+    }
+  }
+
   &__item:not(:last-child) {
     margin-right: 50px;
 
@@ -96,6 +127,10 @@
 
     @include tablet {
       margin-right: 39px;
+    }
+
+    @include extra-tablet {
+      margin-right: 30px;
     }
   }
 
@@ -122,6 +157,13 @@
       font-size: 17px;
       line-height: 25px;
     }
+
+    @include extra-tablet {
+      margin-bottom: 8px;
+      font-size: 13px;
+      line-height: 17px;
+    }
+
   }
 
   &__underline {
@@ -138,6 +180,11 @@
 
     @include tablet {
       width: 50px;
+    }
+
+    @include extra-tablet {
+      width: 37.5px;
+      height: 4px;
     }
   }
 }
@@ -164,6 +211,10 @@
     padding: 20px 23px;
   }
 
+  @include extra-tablet {
+    padding: 20px;
+  }
+
   &__image {
     margin-bottom: 26px;
 
@@ -174,6 +225,12 @@
     @include big-tablet {
       max-width: 71px;
       max-height: 71px;
+    }
+
+    @include extra-tablet {
+      max-width: 56px;
+      max-height: 56px;
+      margin-bottom: 4px;
     }
   }
 
@@ -200,6 +257,12 @@
       font-size: 20px;
       line-height: 25px;
     }
+
+    @include extra-tablet {
+      margin-bottom: 6px;
+      font-size: 14px;
+      line-height: 17px;
+    }
   }
 
   &__descr {
@@ -216,6 +279,11 @@
     @include big-tablet {
       font-size: 15px;
       line-height: 18px;
+    }
+
+    @include extra-tablet {
+      font-size: 11px;
+      line-height: 14px;
     }
   }
 
@@ -237,6 +305,11 @@
       height: 40px;
     }
 
+    @include small-tablet {
+      width: 25px;
+      height: 25px;
+    }
+
     &::after {
       content: '';
       position: absolute;
@@ -251,6 +324,12 @@
       @include big-desktop {
         width: 6px;
         height: 6px;
+      }
+
+      @include extra-tablet {
+        width: 5px;
+        height: 5px;
+        border-width: 2px;
       }
     }
   }

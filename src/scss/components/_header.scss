@@ -14,6 +14,10 @@
     width: 75px;
   }
 
+  @include extra-tablet {
+    width: 40px;
+  }
+
 
   &__container {
     height: 100vh;
@@ -23,6 +27,11 @@
     flex-direction: column;
     align-items: center;
     border-left: 1px solid $scroll-gray;
+
+    @include extra-tablet {
+      padding-top: 40px;
+      border-left-color: transparent;
+    }
   }
 
   &__icon {
@@ -31,6 +40,10 @@
     height: 63px;
     fill: transparent;
     stroke: $scroll-gray;
+
+    @include extra-tablet {
+      display: none;
+    }
   }
 }
 
@@ -44,6 +57,10 @@
   align-items: center;
   transform: none;
   transition: transform .3s ease-in-out;
+
+  @include extra-tablet {
+    width: 30px;
+  }
 
   &::after, &::before {
     content: '';

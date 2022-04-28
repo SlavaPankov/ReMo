@@ -19,6 +19,10 @@
       padding: 124px 0;
       max-width: calc(100% - 150px);
     }
+
+    @include small-tablet {
+      max-width: calc(100% - 80px);
+    }
   }
 
   &__list {
@@ -50,6 +54,14 @@
       font-size: 55px;
       line-height: 70px;
     }
+
+    @include extra-tablet {
+      font-size: 5.54vw;
+    }
+
+    @include small-tablet {
+      font-size: 6.51vw;
+    }
   }
 
   &__dlc {
@@ -66,6 +78,11 @@
 
     @include tablet {
       transform: translateX(-15px);
+    }
+
+    @include small-tablet {
+      font-size: 20px;
+      line-height: 29px;
     }
   }
 
@@ -87,6 +104,11 @@
     @include big-tablet {
       font-size: 15px;
       line-height: 18px;
+    }
+
+    @include small-tablet {
+      font-size: 10px;
+      line-height: 11px;
     }
   }
 }

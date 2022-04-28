@@ -13,6 +13,11 @@
     background-size: contain;
   }
 
+  @include extra-tablet {
+    background: url("../img/welcome-background-768.webp") left bottom no-repeat $black;
+    background-size: auto;
+  }
+
   &__container {
     padding: 285px 160px 323px 100px;
 
@@ -56,6 +61,11 @@
       font-size: 130px;
       line-height: 130px;
     }
+
+    @include extra-tablet {
+      font-size: 13.1vw;
+      line-height: 100px;
+    }
   }
 
   &__text {
@@ -82,6 +92,16 @@
 
     @include tablet {
       font-size: 90px;
+    }
+
+    @include extra-tablet {
+      font-size: 80px;
+      line-height: 80px;
+    }
+
+    @include small-tablet {
+      font-size: 70px;
+      line-height: 70px;
     }
   }
 
@@ -114,6 +134,17 @@
       line-height: 13px;
       margin-top: -5px;
     }
+
+    @include extra-tablet {
+      font-size: 8.5px;
+      line-height: 10px;
+      margin-top: 0;
+    }
+
+    @include small-tablet {
+      margin-top: 0;
+      font-size: 7.5px;
+    }
   }
 
   &__image {
@@ -125,6 +156,11 @@
     @include tablet {
       max-width: 45px;
       max-height: 45px;
+    }
+
+    @include extra-tablet {
+      max-width: 35px;
+      max-height: 35px;
     }
   }
 }

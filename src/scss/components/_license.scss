@@ -23,6 +23,13 @@
     background-size: 195px 255px, 345px 236px, 489px 262px;
   }
 
+  @include small-tablet {
+    background: url("../img/1-license-768.webp") left 20px top no-repeat,
+    url('../img/2-license-768.webp') right 40px top no-repeat,
+    url('../img/3-license-768.webp') left 20px bottom no-repeat;
+    background-size:auto, auto, auto;
+  }
+
   ::after {
     content: '';
     position: absolute;
@@ -41,6 +48,10 @@
     @include big-tablet {
       top: 40px;
       height: 463px;
+    }
+
+    @include small-tablet {
+      height: 295px;
     }
   }
 
@@ -78,6 +89,11 @@
       padding-top: 131px;
       padding-bottom: 137px;
     }
+
+    @include small-tablet {
+      padding-top: 68px;
+      padding-bottom: 50px;
+    }
   }
 
   &__heading {
@@ -101,6 +117,15 @@
 
     @include tablet {
       grid-area: 2 / 7 / 3 / 11;
+    }
+
+    @include extra-tablet {
+      font-size: 14px;
+      line-height: 19px;
+    }
+
+    @include tablet {
+      padding-left: 0;
     }
   }
 
@@ -132,6 +157,17 @@
       font-size: 20px;
       line-height: 23px;
     }
+
+    @include extra-tablet {
+      margin-bottom: 110px;
+      max-width: 400px;
+      font-size: 2.21vw;
+      line-height: 21px;
+    }
+
+    @include small-tablet {
+      margin-bottom: 80px;
+    }
   }
 
   &__author {
@@ -150,6 +186,11 @@
     @include tablet {
       font-size: 15px;
       line-height: 19px;
+    }
+
+    @include extra-tablet {
+      font-size: 11px;
+      line-height: 15px;
     }
   }
 
@@ -172,7 +213,14 @@
     }
 
     @include tablet {
+      width: 42px;
+      height: 42px;
       grid-area: 2 / 11 / 3 / 12;
+    }
+
+    @include small-tablet {
+      width: 32px;
+      height: 32px;
     }
 
     &::after {
@@ -186,6 +234,12 @@
       background-color: transparent;
       border-bottom: 3px solid $blue;
       border-right: 3px solid $blue;
+
+      @include small-tablet {
+        width: 7px;
+        height: 7px;
+        border-width: 2px;
+      }
     }
   }
 }

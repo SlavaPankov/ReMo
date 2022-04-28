@@ -25,4 +25,11 @@
     font-size: 16px;
     line-height: 19px;
   }
+
+  @include small-tablet {
+    max-width: 141px;
+    padding: 13px 19px;
+    font-size: 10px;
+    line-height: 12px;
+  }
 }
