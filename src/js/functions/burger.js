@@ -12,6 +12,13 @@ vars.burgerBtn.addEventListener('click' ,() => {
   scrollBar.classList.toggle(vars.burgerClassesZIndex);
 });
 
+vars.burgerMenuLink.forEach(link => {
+  link.addEventListener('click', () => {
+    vars.burgerMenu.classList.remove(vars.burgerClassesOpen);
+    vars.burgerBtn.classList.remove(vars.burgerClassesBtnOpen);
+  });
+});
+
 // Dropdown в бургер
 
 vars.dropdownBtn.forEach(item => {

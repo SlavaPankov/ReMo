@@ -25,6 +25,12 @@
       padding-top: 64px;
       padding-bottom: 82px;
     }
+
+    @include mobile {
+      max-width: calc(100% - 30px);
+      padding-top: 87px;
+      padding-bottom: 67px;
+    }
   }
 
   &__heading {
@@ -49,6 +55,11 @@
     @include small-tablet {
       font-size: 18px;
       line-height: 22px;
+    }
+
+    @include mobile {
+      font-size: 16px;
+      line-height: 20px;
     }
   }
 
@@ -76,8 +87,19 @@
       font-size: 14px;
       line-height: 18px;
     }
+
+    @include mobile {
+      font-size: 8px;
+      line-height: 10px;
+    }
   }
   &__btn {
     @include btn-primary;
+  }
+}
+
+.br {
+  @include mobile {
+    display: block;
   }
 }

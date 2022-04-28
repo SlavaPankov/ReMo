@@ -5,7 +5,7 @@ export default {
   burgerBtn: document.querySelector('.burger'),
   burgerLine: document.querySelector('.burger__line'),
   burgerMenu: document.querySelector('.nav'),
-  burgerMenuLink: document.querySelector('.nav__link'),
+  burgerMenuLink: document.querySelectorAll('.nav__link'),
   header: document.querySelector('.header__container'),
   burgerClassesOpen: 'opened',
   burgerClassesOverflow: 'overflow',

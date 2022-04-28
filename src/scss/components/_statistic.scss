@@ -23,13 +23,28 @@
     @include small-tablet {
       max-width: calc(100% - 80px);
     }
+
+    @include mobile {
+      max-width: calc(100% - 30px);
+      padding: 70px 0;
+    }
   }
 
-  &__list {
+  &__list{
     display: flex;
     flex-direction: row;
     align-items: flex-start;
     justify-content: space-between;
+
+    @include mobile {
+      display: grid;
+      grid-template-columns: auto auto;
+      justify-content: space-around
+    }
+  }
+
+  &__item:nth-child(4n + 1), &__item:nth-child(4n + 2) {
+    margin-bottom: 45px;
   }
 
   &__numeric {
@@ -61,6 +76,11 @@
 
     @include small-tablet {
       font-size: 6.51vw;
+    }
+
+    @include mobile {
+      font-size: 50px;
+      line-height: 50px;
     }
   }
 

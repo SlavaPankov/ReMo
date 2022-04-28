@@ -18,6 +18,11 @@
     background-size: auto;
   }
 
+  @include mobile {
+    background: url("../img/welcome-background-320.webp") center bottom no-repeat $black;
+    background-size: auto;
+  }
+
   &__container {
     padding: 285px 160px 323px 100px;
 
@@ -35,6 +40,10 @@
       padding-top: 200px;
       padding-right: 75px;
       padding-bottom: 110px;
+    }
+
+    @include mobile {
+      padding: 123px 5px 150px;
     }
   }
 
@@ -66,6 +75,12 @@
       font-size: 13.1vw;
       line-height: 100px;
     }
+
+    @include mobile {
+      font-size:  15.55vw;
+      line-height: 60px;
+      text-align: center;
+    }
   }
 
   &__text {
@@ -76,6 +91,12 @@
     letter-spacing: .16em;
     color: $white;
     text-transform: none;
+
+    @include mobile {
+      display: block;
+      font-size: 3.99vw;
+      line-height: 26px;
+    }
   }
 
   &__logo {
@@ -103,6 +124,12 @@
       font-size: 70px;
       line-height: 70px;
     }
+
+    @include mobile {
+      font-size: 50px;
+      line-height: 60px;
+      text-align: center;
+    }
   }
 
   &__name {
@@ -111,6 +138,10 @@
 
     @include tablet {
       transform: translateX(20px);
+    }
+
+    @include mobile {
+      transform: translateX(10px);
     }
   }
 
@@ -145,6 +176,10 @@
       margin-top: 0;
       font-size: 7.5px;
     }
+
+    @include mobile {
+      font-size: 6px;
+    }
   }
 
   &__image {
@@ -161,6 +196,11 @@
     @include extra-tablet {
       max-width: 35px;
       max-height: 35px;
+    }
+
+    @include mobile {
+      max-width: 30px;
+      max-height: 30px;
     }
   }
 }

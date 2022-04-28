@@ -102,9 +102,19 @@
   z-index: 9998;
   transition: transform .3s ease-in-out;
 
+  @include mobile {
+    padding: 10vh 0;
+    width: 100%;
+    align-items: center;
+  }
+
   &__list {
     display: flex;
     flex-direction: column;
+
+    @include mobile {
+      max-width: calc(100% - 30px);
+    }
   }
 
   &__item {

@@ -24,4 +24,18 @@ new Swiper('.maintenance__swiper', {
     bulletClass: 'maintenance__bullet',
     bulletActiveClass: 'maintenance__bullet-active',
   },
+
+  breakpoints: {
+    320: {
+      slidesPerView: 1,
+      slidesPerGroup: 1,
+      spaceBetween: 0,
+    },
+
+    576: {
+      slidesPerView: 3,
+      slidesPerGroup: 2,
+      spaceBetween: 6,
+    }
+  }
 });

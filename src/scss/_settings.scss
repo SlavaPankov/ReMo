@@ -127,6 +127,7 @@ a {
   }
 
   @include extra-tablet {
+    width: 1px !important;
     visibility: hidden !important;
   }
 }

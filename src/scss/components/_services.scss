@@ -1,4 +1,6 @@
 .services {
+  position: relative;
+
   &__container {
     padding-top: 70px;
     padding-bottom: 60px;
@@ -18,7 +20,13 @@
 
     @include extra-tablet {
       padding-top: 40px;
+      padding-left: 0;
       max-width: calc(100% - 80px);
+    }
+
+    @include mobile {
+      max-width: calc(100% - 30px);
+      padding-bottom: 20px;
     }
   }
 
@@ -41,7 +49,7 @@
       line-height: 44px;
     }
 
-    @include  tablet {
+    @include tablet {
       font-size: 30px;
       line-height: 39px;
     }
@@ -50,6 +58,12 @@
       margin-bottom: 33px;
       font-size: 25px;
       line-height: 29px;
+    }
+
+    @include mobile {
+      font-size: 18px;
+      line-height: 22px;
+      margin-bottom: 70px;
     }
   }
 
@@ -80,6 +94,10 @@
 
   &__swiper {
     padding-bottom: 91px !important;
+
+    @include mobile {
+      padding-bottom: 20px !important;
+    }
   }
 
   &__pagination {
@@ -108,9 +126,21 @@
     margin-bottom: 0;
   }
 
+  @include mobile {
+    display: none;
+  }
+
   &__item {
     @include extra-tablet {
       margin-bottom: 30px;
+    }
+
+    @include mobile {
+      max-width: 114px;
+    }
+
+    @include mobile {
+      margin-bottom: 10px;
     }
   }
 
@@ -141,6 +171,7 @@
   }
 
   &__title {
+    position: relative;
     margin-bottom: 13px;
     font-size: 30px;
     line-height: 35px;
@@ -164,6 +195,10 @@
       line-height: 17px;
     }
 
+    @include mobile {
+      font-size: 10px;
+      line-height: 11px;
+    }
   }
 
   &__underline {
@@ -186,6 +221,10 @@
       width: 37.5px;
       height: 4px;
     }
+
+    @include mobile {
+      display: none;
+    }
   }
 }
 
@@ -195,6 +234,10 @@
 
 .is-active + .category-list__underline {
   background-color: $blue;
+
+  @include mobile {
+    display: block;
+  }
 }
 
 .no-wrap {
@@ -333,4 +376,54 @@
       }
     }
   }
+}
+
+.category-list-320 {
+  display: none;
+
+  @include mobile {
+    position: absolute;
+    left: 0;
+    top: 83px;
+    width: 100%;
+    padding-left: 15px;
+    margin-bottom: 13px;
+    display: flex;
+    flex-direction: column;
+    height: 33px;
+    background-color: $white;
+    z-index: 3;
+    overflow-y: hidden;
+    transition: height .3s ease-in-out;
+  }
+}
+
+.category-list__item:first-child .category-list__title {
+  position: relative;
+
+  @include mobile {
+    font-size: 15px;
+    line-height: 19px;
+    max-width: 190px;
+  }
+
+  &::after {
+    @include mobile {
+      content: '';
+      position: absolute;
+      top: 50%;
+      right: -15px;
+      width: 7px;
+      height: 7px;
+      border-bottom: 2px solid $black;
+      border-right: 2px solid $black;
+      transform: translateY(-70%) rotate(45deg);
+    }
+  }
+}
+
+.dropdown-open {
+  overflow-y: auto;
+  height: 190px;
+  box-shadow: 0  4px 4px rgba(0, 0, 0, 0.25);
 }

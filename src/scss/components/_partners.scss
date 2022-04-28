@@ -24,6 +24,11 @@
       max-width: calc(100% - 80px);
       padding: 48px 0;
     }
+
+    @include mobile {
+      max-width: calc(100% - 30px);
+      padding: 45px 0;
+    }
   }
 
   &__list {
@@ -45,10 +50,10 @@
     @include tablet {
       padding: 45px 55px;
     }
-  }
 
-  &__item:not(:last-child) {
-    //margin-right: 60px;
+    @include mobile {
+      padding: 34px 11px;
+    }
   }
 
   &__image-1 {
@@ -60,6 +65,10 @@
     @include extra-tablet {
       max-width: 48px;
     }
+
+    @include mobile {
+      max-width: 39px;
+    }
   }
   &__image-2 {
     @include big-desktop {
@@ -69,6 +78,10 @@
 
     @include extra-tablet {
       max-width: 88px;
+    }
+
+    @include mobile {
+      max-width: 58px;
     }
   }
   &__image-3 {
@@ -80,6 +93,10 @@
     @include extra-tablet {
       max-width: 55px;
     }
+
+    @include mobile {
+      max-width: 35px;
+    }
   }
   &__image-4 {
     @include big-desktop {
@@ -89,6 +106,10 @@
 
     @include extra-tablet {
       max-width: 100px;
+    }
+
+    @include mobile {
+      max-width: 76px;
     }
   }
 }

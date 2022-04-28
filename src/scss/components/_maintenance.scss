@@ -12,6 +12,12 @@
       max-width: calc(100% - 80px);
       padding-bottom: 40px;
     }
+
+    @include mobile {
+      max-width: calc(100% - 30px);
+      padding-bottom: 20px;
+      padding-left: 0;
+    }
   }
 
   &__heading {
@@ -43,6 +49,11 @@
       font-size: 25px;
       line-height: 29px;
     }
+
+    @include mobile {
+      font-size: 18px;
+      line-height: 23px;
+    }
   }
 
   &__slide {
@@ -67,6 +78,10 @@
 
     @include extra-tablet {
       height: 298px !important;
+    }
+
+    @include mobile {
+      height: 361px !important;
     }
   }
 
@@ -99,6 +114,11 @@
 
   &__swiper {
     padding-bottom: 70px !important;
+
+    @include mobile {
+      max-width: 385px;
+      padding-bottom: 22px !important;
+    }
   }
 
   &__swiper-wrapper {
@@ -242,6 +262,11 @@
 
     @include tablet {
       width: 37.5px;
+    }
+
+    @include mobile {
+      width: 15px;
+      height: 3px;
     }
   }
 
