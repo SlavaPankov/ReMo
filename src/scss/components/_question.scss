@@ -10,7 +10,7 @@
   }
 
   @include mobile {
-    background: url('../img/question-background-320.webp') left bottom no-repeat transparent;
+    background: url('../img/question-background-768.webp') left -50px bottom no-repeat transparent;
   }
 
   &__container {

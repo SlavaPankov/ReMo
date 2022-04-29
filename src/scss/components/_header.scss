@@ -32,6 +32,12 @@
       padding-top: 40px;
       border-left-color: transparent;
     }
+
+    @include mobile {
+      padding-top: 20px;
+      padding-right: 20px;
+      align-self: flex-end;
+    }
   }
 
   &__icon {
@@ -97,28 +103,39 @@
   align-items: flex-start;
   width: 524px;
   height: 100vh;
-  padding: 10vh 142px;
+  padding: 0 142px 10vh 142px;
   background-color: $white;
   z-index: 9998;
   transition: transform .3s ease-in-out;
 
   @include mobile {
-    padding: 10vh 0;
+    padding: 0 0 10vh 0;
     width: 100%;
     align-items: center;
+    overflow-y: auto;
   }
 
   &__list {
     display: flex;
     flex-direction: column;
+    margin-top: 10vh;
 
     @include mobile {
       max-width: calc(100% - 30px);
+      margin-bottom: 50px;
     }
   }
 
   &__item {
     margin-bottom: 50px;
+
+    @include extra-tablet {
+      margin-bottom: 35px;
+    }
+
+    @include mobile {
+      margin-bottom: 20px;
+    }
   }
 
   &__link {
@@ -132,6 +149,11 @@
     @include big-desktop {
       font-size: 25px;
       line-height: 29px;
+    }
+
+    @include mobile {
+      font-size: 20px;
+      line-height: 24px;
     }
   }
 
@@ -151,6 +173,11 @@
       line-height: 21px;
     }
 
+    @include mobile {
+      font-size: 15px;
+      line-height: 19px;
+    }
+
     &::after {
       content: '';
       position: absolute;
@@ -162,6 +189,11 @@
       border-bottom: 2px solid $dark-gray;
       border-right: 2px solid $dark-gray;
       transition: transform .3s ease-in-out;
+
+      @include mobile {
+        width: 7px;
+        height: 7px;
+      }
     }
   }
 
@@ -176,6 +208,11 @@
     line-height: 25px;
     font-weight: 300;
     color: $dark-gray;
+
+    @include mobile {
+      font-size: 13px;
+      line-height: 15px;
+    }
   }
 
   &__schedule {
@@ -197,6 +234,12 @@
 .nav__social {
   margin-top: auto;
   align-self: center;
+
+  &-icon {
+    max-width: 25px;
+    max-height: 25px;
+    fill: $black;
+  }
 
   &-list {
     width: 73px;

@@ -1,5 +1,22 @@
 .request {
-  background-color: $black;
+  background: url("../img/request-background.webp") center center no-repeat $black;
+  //background-size: contain;
+
+  @include big-desktop {
+    background: url("../img/request-background-1440.webp") center center no-repeat $black;
+  }
+
+  @include big-tablet {
+    background: url("../img/request-background-1024.webp") center center no-repeat $black;
+  }
+
+  @include tablet {
+    background: url("../img/request-background-768.webp") center center no-repeat $black;
+  }
+
+  @include mobile {
+    background: url("../img/request-background-320.webp") center center no-repeat $black;
+  }
 
   &__container {
     padding-top: 136px;

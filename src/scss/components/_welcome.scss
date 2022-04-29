@@ -179,6 +179,8 @@
 
     @include mobile {
       font-size: 6px;
+      margin-top: -7px;
+      transform: translateX(5px);
     }
   }
 

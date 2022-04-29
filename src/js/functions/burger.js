@@ -16,6 +16,7 @@ vars.burgerMenuLink.forEach(link => {
   link.addEventListener('click', () => {
     vars.burgerMenu.classList.remove(vars.burgerClassesOpen);
     vars.burgerBtn.classList.remove(vars.burgerClassesBtnOpen);
+    vars.burgerLine.classList.remove(vars.burgerClassesLine);
   });
 });
 

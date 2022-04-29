@@ -1,0 +1,76 @@
+.application {
+  background: url('../img/question-background.webp') left bottom no-repeat transparent;
+
+  &__container {
+    max-width: 1080px;
+    padding-left: 0;
+    padding-top: 47px;
+    padding-bottom: 130px;
+  }
+
+  &__heading {
+    font-size: 40px;
+    line-height: 48px;
+    font-weight: 700;
+    color: $dark-gray;
+    text-transform: uppercase;
+    letter-spacing: .03em;
+  }
+
+  &__subheading {
+    margin-bottom: 50px;
+    font-size: 30px;
+    line-height: 35px;
+    font-weight: 300;
+    color: $dark-gray;
+    text-transform: uppercase;
+    letter-spacing: .03em;
+  }
+}
+
+.form-app {
+  max-width: 1010px;
+  display: flex;
+  flex-direction: column;
+
+  &__input {
+    width: 100%;
+    padding: 25px 75px;
+    font-size: 20px;
+    line-height: 23px;
+    font-weight: 400;
+    color: $dark-gray;
+    background-color: $gray-64;
+
+    &::placeholder {
+      font-size: 20px;
+      line-height: 23px;
+      font-weight: 400;
+      color: $dark-gray;
+      letter-spacing: .03em;
+    }
+  }
+
+  &__label {
+    display: flex;
+    flex-direction: column-reverse;
+    margin-bottom: 10px;
+  }
+
+  &__subscribe {
+    margin-bottom: 50px;
+    font-size: 15px;
+    line-height: 17px;
+    font-weight: 400;
+    color: $gray-64;
+  }
+
+  &__btn {
+    @include btn-primary
+  }
+
+  &__confidential {
+    color: $gray-64;
+    text-decoration: underline;
+  }
+}

@@ -1,0 +1,51 @@
+.iblock-3 {
+  position: relative;
+  transform: translateY(-65px);
+  background: url("../img/block-3.webp") left 1000px top no-repeat transparent;
+  z-index: -1;
+
+  &__container {
+    max-width: 1410px;
+    padding-top: 200px;
+    padding-left: 0;
+  }
+
+  &__heading {
+    margin-bottom: 80px;
+    font-size: 50px;
+    line-height: 58px;
+    font-weight: 900;
+    color: $dark-gray;
+    letter-spacing: .03em;
+    text-transform: uppercase;
+  }
+
+  &__title {
+    margin-bottom: 1em;
+    font-size: 30px;
+    line-height: 38px;
+    font-weight: 700;
+    color: $dark-gray;
+    letter-spacing: .03em;
+    text-transform: uppercase;
+  }
+
+  &__list-1 {
+    margin-bottom: 100px;
+  }
+}
+
+.iblock-3-list {
+
+  &__item {
+    font-size: 30px;
+    line-height: 35px;
+    font-weight: 400;
+    color: $dark-gray;
+    letter-spacing: .03em;
+  }
+
+  &__item:not(:last-child) {
+    margin-bottom: .5em;
+  }
+}
