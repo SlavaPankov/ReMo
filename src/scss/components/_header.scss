@@ -15,6 +15,10 @@
   }
 
   @include extra-tablet {
+    width: 80px;
+  }
+
+  @include mobile {
     width: 40px;
   }
 

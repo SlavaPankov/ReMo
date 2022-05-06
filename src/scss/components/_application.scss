@@ -1,11 +1,46 @@
 .application {
   background: url('../img/question-background.webp') left bottom no-repeat transparent;
 
+  @include big-desktop {
+    background: url('../img/question-background-1440.webp') left bottom no-repeat transparent;
+  }
+
+  @include small-tablet {
+    background: url('../img/application-bg-768.webp') left bottom no-repeat transparent;
+  }
+
   &__container {
     max-width: 1080px;
     padding-left: 0;
     padding-top: 47px;
     padding-bottom: 130px;
+
+    @include big-desktop {
+      max-width: calc(100% - 200px);
+      padding-top: 200px;
+      padding-bottom: 120px;
+    }
+
+    @include big-tablet {
+      padding-top: 130px;
+      padding-bottom: 105px;
+    }
+
+    @include extra-tablet {
+      max-width: calc(100% - 160px);
+    }
+
+    @include small-tablet {
+      max-width: calc(100% - 80px);
+      padding-top: 90px;
+      padding-bottom: 55px;
+    }
+
+    @include mobile {
+      max-width: calc(100% - 30px);
+      padding-top: 70px;
+      padding-bottom: 70px;
+    }
   }
 
   &__heading {
@@ -15,6 +50,25 @@
     color: $dark-gray;
     text-transform: uppercase;
     letter-spacing: .03em;
+
+    @include big-desktop {
+      text-align: center;
+    }
+
+    @include big-tablet {
+      font-size: 30px;
+      line-height: 38px;
+    }
+
+    @include small-tablet {
+      font-size: 25px;
+      line-height: 33px;
+    }
+
+    @include mobile {
+      font-size: 20px;
+      line-height: 25px;
+    }
   }
 
   &__subheading {
@@ -25,6 +79,34 @@
     color: $dark-gray;
     text-transform: uppercase;
     letter-spacing: .03em;
+
+    @include big-desktop {
+      max-width: 860px;
+      margin: 0 auto 50px;
+      font-size: 25px;
+      line-height: 30px;
+      text-align: center;
+    }
+
+    @include big-tablet {
+      max-width: 656px;
+      font-size: 20px;
+      line-height: 25px;
+    }
+
+    @include small-tablet {
+      max-width: 542px;
+      margin-bottom: 25px;
+      font-size: 18px;
+      line-height: 23px;
+    }
+
+    @include mobile {
+      max-width: 100%;
+      margin-bottom: 13px;
+      font-size: 10px;
+      line-height: 15px;
+    }
   }
 }
 
@@ -32,6 +114,19 @@
   max-width: 1010px;
   display: flex;
   flex-direction: column;
+
+  @include big-desktop {
+    max-width: 670px;
+    margin: 0 auto;
+  }
+
+  @include small-tablet {
+    max-width: 450px;
+  }
+
+  @include mobile {
+    max-width: 100%;
+  }
 
   &__input {
     width: 100%;
@@ -42,12 +137,27 @@
     color: $dark-gray;
     background-color: $gray-64;
 
+    @include big-desktop {
+      padding: 20px 50px;
+    }
+
+    @include small-tablet {
+      padding: 20px 35px;
+      font-size: 15px;
+      line-height: 18px;
+    }
+
     &::placeholder {
       font-size: 20px;
       line-height: 23px;
       font-weight: 400;
       color: $dark-gray;
       letter-spacing: .03em;
+
+      @include small-tablet {
+        font-size: 15px;
+        line-height: 18px;
+      }
     }
   }
 
@@ -62,7 +172,12 @@
     font-size: 15px;
     line-height: 17px;
     font-weight: 400;
-    color: $gray-64;
+    color: $gray-63;
+
+    @include small-tablet {
+      max-width: 380px;
+      margin-bottom: 35px;
+    }
   }
 
   &__btn {
@@ -70,7 +185,7 @@
   }
 
   &__confidential {
-    color: $gray-64;
+    color: $gray-63;
     text-decoration: underline;
   }
 }

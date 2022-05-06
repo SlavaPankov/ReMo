@@ -1,0 +1,56 @@
+@mixin services-card-heading {
+  font-size: 50px;
+  line-height: 58px;
+  font-weight: 900;
+  color: $dark-gray;
+  letter-spacing: .03em;
+  text-transform: uppercase;
+
+  @include big-desktop {
+    font-size: 40px;
+    line-height: 48px;
+  }
+
+  @include big-tablet {
+    font-size: 30px;
+    line-height: 38px;
+  }
+
+  @include small-tablet {
+    font-size: 25px;
+    line-height: 29px;
+  }
+
+  @include mobile {
+    font-size: 20px;
+    line-height: 23px;
+  }
+}
+
+@mixin services-card-item {
+  font-size: 30px;
+  line-height: 35px;
+  font-weight: 400;
+  color: $dark-gray;
+  letter-spacing: .03em;
+
+  @include big-desktop {
+    font-size: 20px;
+    line-height: 25px;
+  }
+
+  @include big-tablet {
+    font-size: 16px;
+    line-height: 19px;
+  }
+
+  @include small-tablet {
+    font-size: 13px;
+    line-height: 16px;
+  }
+
+  @include mobile {
+    font-size: 10px;
+    line-height: 13px;
+  }
+}

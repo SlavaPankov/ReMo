@@ -238,6 +238,12 @@ a {
   padding: 85px 64px 75px;
   background-color: $white;
 
+  @include mobile {
+    max-width: 100%;
+    padding: 20px 10px;
+
+  }
+
   &__heading, &__descr {
     font-size: 20px;
     line-height: 23px;
@@ -246,6 +252,16 @@ a {
     text-transform: uppercase;
     letter-spacing: .03em;
     text-align: center;
+
+    @include small-tablet {
+      font-size: 14px;
+      line-height: 18px;
+    }
+
+    @include mobile {
+      font-size: 12px;
+      line-height: 14px;
+    }
   }
 
   &__descr {
@@ -275,6 +291,13 @@ a {
     background: transparent;
     z-index: 10;
     cursor: pointer;
+
+    @include mobile {
+      top: 10px;
+      right: 10px;
+      width: 14px;
+      height: 14px;
+    }
 
     &::after, &::before {
       content: '';
@@ -358,6 +381,12 @@ a {
     color: $dark-gray;
     background-color: $gray-64;
     border: none;
+
+    @include mobile {
+      padding: 15px 25px;
+      font-size: 12px;
+      line-height: 14px;
+    }
   }
 
   &__btn {
@@ -370,6 +399,11 @@ a {
     line-height: 17px;
     font-weight: 400;
     color: $dark-gray-63;
+
+    @include mobile {
+      font-size: 10px;
+      line-height: 12px;
+    }
   }
 
   &__confidential {

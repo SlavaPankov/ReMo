@@ -3,14 +3,33 @@
   background: url("../img/join-us-background.webp") center top no-repeat transparent;
   background-size: auto;
 
-  &::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    right: 134px;
-    width: 447px;
-    height: 413px;
-    border: 20px solid $blue;
+  @include big-desktop {
+    background: url("../img/join-us-background-1580.webp") center top no-repeat transparent;
+  }
+
+  @include extra-desktop {
+    background: url("../img/join-us-background-1440.webp") center top no-repeat transparent;
+  }
+
+  @include big-tablet {
+    background: url("../img/join-us-background-1250.webp") center top -50px no-repeat transparent;
+  }
+
+  @include tablet {
+    background: url("../img/join-us-background-1024.webp") right top no-repeat transparent;
+  }
+
+  @include extra-tablet {
+    background: url("../img/join-us-background-992.webp") right top no-repeat transparent;
+  }
+
+  @include small-tablet {
+    background: url("../img/join-us-background-768.webp") right top no-repeat transparent;
+  }
+
+  @include mobile{
+    background: url("../img/join-us-background-320.webp") center center no-repeat transparent;
+    background-size: cover;
   }
 
   &__container {
@@ -18,15 +37,50 @@
     padding-left: 0;
     padding-top: 125px;
     padding-bottom: 75px;
+
+    @include big-desktop {
+      max-width: calc(100% - 200px);
+      padding-top: 130px;
+      padding-bottom: 95px;
+    }
+
+    @include extra-desktop {
+      padding-top: 125px;
+      padding-bottom: 65px;
+    }
+
+    @include extra-tablet {
+      max-width: calc(100% - 160px);
+    }
+
+    @include small-tablet {
+      max-width: calc(100% - 80px);
+      padding-top: 80px;
+      padding-bottom: 55px;
+    }
+
+    @include mobile {
+      max-width: calc(100% - 30px);
+      padding-bottom: 110px;
+    }
   }
 
   &__heading {
     margin-bottom: 14px;
-    font-size: 50px;
-    line-height: 58px;
-    font-weight: 900;
+    @include services-card-heading;
     color: $white;
-    text-transform: uppercase;
+
+    @include big-desktop {
+      margin-bottom: 45px;
+    }
+
+    @include big-tablet {
+      margin-bottom: 30px;
+    }
+
+    @include mobile {
+      margin-bottom: 15px;
+    }
   }
 
   &__description {
@@ -37,10 +91,45 @@
     font-weight: 700;
     color: $white;
     text-transform: uppercase;
+
+    @include big-desktop {
+      max-width: 785px;
+      margin-bottom: 130px;
+      font-size: 25px;
+      line-height: 30px;
+    }
+
+    @include extra-desktop {
+      margin-bottom: 110px;
+    }
+
+    @include big-tablet {
+      max-width: 620px;
+      margin-bottom: 66px;
+      font-size: 20px;
+      line-height: 25px;
+    }
+
+    @include small-tablet {
+      max-width: 455px;
+      margin-bottom: 55px;
+      font-size: 18px;
+      line-height: 21px;
+    }
+
+    @include mobile {
+      max-width: 286px;
+      font-size: 13px;
+      line-height: 15px;
+    }
   }
 
   &__paragraph:first-child {
     margin-bottom: 1em;
+
+    @include big-desktop {
+      margin-bottom: 0;
+    }
   }
 
   &__btn {
@@ -53,6 +142,16 @@
     border-radius: 100%;
     cursor: pointer;
 
+    @include big-desktop {
+      width: 60px;
+      height: 60px;
+    }
+
+    @include tablet {
+      width: 50px;
+      height: 50px;
+    }
+
     &::after {
       content: '';
       position: absolute;
@@ -63,6 +162,11 @@
       transform: translate(-50%, -65%) rotate(45deg);
       border-bottom: 1.5px solid $white;
       border-right: 1.5px solid $white;
+
+      @include tablet {
+        width: 10px;
+        height: 10px;
+      }
     }
   }
 }

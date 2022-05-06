@@ -1,7 +1,6 @@
 import vars from '../_vars';
 
-// Открытие закрытие меню
-vars.burgerBtn.addEventListener('click' ,() => {
+function burgerOpenClose(vars) {
   const scrollWrapper = document.querySelector('.simplebar-content-wrapper');
   const scrollBar = document.querySelector('.simplebar-vertical');
   vars.burgerMenu.classList.toggle(vars.burgerClassesOpen);
@@ -10,13 +9,16 @@ vars.burgerBtn.addEventListener('click' ,() => {
   vars.burgerLine.classList.toggle(vars.burgerClassesLine);
   scrollWrapper.classList.toggle(vars.burgerClassesOverflow);
   scrollBar.classList.toggle(vars.burgerClassesZIndex);
+}
+
+// Открытие закрытие меню
+vars.burgerBtn.addEventListener('click' ,() => {
+  burgerOpenClose(vars);
 });
 
 vars.burgerMenuLink.forEach(link => {
   link.addEventListener('click', () => {
-    vars.burgerMenu.classList.remove(vars.burgerClassesOpen);
-    vars.burgerBtn.classList.remove(vars.burgerClassesBtnOpen);
-    vars.burgerLine.classList.remove(vars.burgerClassesLine);
+    burgerOpenClose(vars);
   });
 });
 

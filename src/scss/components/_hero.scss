@@ -11,6 +11,48 @@
     height: 294px;
     transform: translateX(-50%);
     border: 20px solid $blue;
+
+    @include big-desktop {
+      top: 290px;
+      left: 47.5%;
+      width: 233px;
+      height: 233px;
+    }
+
+    @include extra-desktop {
+      width: 16.18vw;
+      height: 16.18vw;
+    }
+
+    @include big-tablet {
+      left: auto;
+      right: 315px;
+      transform: none;
+      width: 215px;
+      height: 215px;
+      border-width: 18px;
+    }
+
+    @include extra-tablet {
+      top: 205px;
+      right: 268px;
+      width: 133px;
+      height: 133px;
+    }
+
+    @include small-tablet {
+      right: 216px;
+      top: 198.5px;
+      border-width: 13px;
+    }
+
+    @include mobile {
+      top: 186.5px;
+      right: 19%;
+      width: 105px;
+      height: 105px;
+      border-width: 8px;
+    }
   }
 
   &__container {
@@ -21,8 +63,49 @@
     padding-top: 163px;
     padding-bottom: 120px;
     padding-left: 0;
-    background: url("../img/hero-background.webp") left -97px top no-repeat $black;
+    background: url("../img/hero-background.webp") left -113px top no-repeat $black;
     background-size: auto;
+
+    @include big-desktop {
+      max-width: calc(100% - 200px);
+      padding-top: 140px;
+      padding-bottom: 110px;
+      background: url("../img/hero-background-1440.webp") left -100px top no-repeat $black;
+    }
+
+    @include extra-desktop {
+      background-position-y: 50px;
+      background-size: 850px 400px;
+    }
+
+    @include big-tablet {
+      grid-template-columns: repeat(10, 1fr);
+      background: url("../img/hero-background-1024.webp") left -60px top no-repeat $black;
+    }
+
+    @include extra-tablet {
+      grid-template-columns: repeat(8, 1fr);
+      max-width: calc(100% - 160px);
+      padding-top: 100px;
+      background: url("../img/hero-background-768.webp") left -30px top no-repeat $black;
+    }
+
+    @include small-tablet {
+      max-width: calc(100% - 80px);
+      padding-bottom: 100px;
+      background: url("../img/hero-background-768.webp") left -30px bottom 605px no-repeat $black;
+      background-size: 87.24vw 43.1vw;
+    }
+
+    @include mobile {
+      max-width: 100%;
+      padding-right: 15px;
+      padding-left: 15px;
+      grid-template-columns: repeat(6, 1fr);
+      padding-bottom: 40px;
+      background: url("../img/hero-background-320.webp") left top 80px no-repeat $black;
+      background-size: auto;
+    }
   }
 
   &__heading {
@@ -36,17 +119,104 @@
     text-transform: uppercase;
     color: $white;
     z-index: 2;
+
+    @include big-desktop {
+      margin-bottom: 25px;
+      font-size: 40px;
+      line-height: 46px;
+    }
+
+    @include extra-desktop {
+      font-size: 2.78vw;
+    }
+
+    @include big-tablet {
+      grid-area: 2 / 1 / 3 / 11;
+      padding-right: 40px;
+      justify-self: right;
+      margin-bottom: 5px;
+    }
+
+    @include extra-tablet {
+      grid-area: 2 / 1 / 3 / 9;
+      padding: 0;
+      font-size: 30px;
+      line-height: 38px;
+      margin-bottom: 40px;
+    }
+
+    @include mobile {
+      grid-area: 2 / 5 / 3 / 7;
+      font-size: 20px;
+      line-height: 28px;
+      margin-bottom: 125px;
+    }
   }
 
   &__logo {
-    grid-area: 1 / 5 / 2 / 9;
+    grid-area: 1 / 1 / 2 / 13;
     margin-bottom: 176px;
     transform: none;
+    justify-self: center;
+
+    @include big-desktop {
+      margin-bottom: 109px;
+    }
+
+    @include extra-desktop {
+      margin-bottom: 7.57vw;
+    }
+
+    @include big-tablet {
+      grid-area: 1 / 1 / 2 / 11;
+      margin-bottom: 75px;
+      justify-self: right;
+      padding-right: 130px;
+    }
+
+    @include extra-tablet {
+      grid-area: 1 / 1 / 2 / 9;
+      margin-bottom: 40px;
+    }
+
+    @include small-tablet {
+      margin-bottom: 45px;
+    }
+
+    @include mobile {
+      grid-area: 1 / 1 / 2 / 7;
+      margin-bottom: 33px;
+      justify-self: right;
+      padding-right: 30px;
+    }
   }
 
   &__breadcrumbs {
+    position: relative;
     grid-area: 3 / 1 / 4 / 13;
     margin-bottom: 100px;
+    z-index: 2;
+
+    @include big-desktop {
+      margin-bottom: 80px;
+    }
+
+    @include big-tablet {
+      grid-area: 3 / 1 / 4 / 11;
+    }
+
+    @include extra-tablet {
+      grid-area: 3 / 1 / 4 / 5;
+    }
+
+    @include small-tablet {
+      grid-area: 3 / 1 / 4 / 7;
+      margin-bottom: 60px;
+    }
+
+    @include mobile {
+      margin-bottom: 35px;
+    }
   }
 
   &__description {
@@ -55,6 +225,30 @@
     font-weight: 300;
     color: $white;
     grid-area: 4 / 1 / 5 / 8;
+
+    @include big-desktop {
+      font-size: 25px;
+      line-height: 30px;
+    }
+
+    @include big-tablet {
+      font-size: 20px;
+      line-height: 25px;
+    }
+
+    @include small-tablet {
+      max-width: 496px;
+      grid-area: 4 / 1 / 5 / 9;
+      font-size: 18px;
+      line-height: 23px;
+    }
+
+    @include mobile {
+      grid-area: 4 / 1 / 5 / 7;
+      max-width: 100%;
+      font-size: 14px;
+      line-height: 16px;
+    }
   }
 
   &__strong {
@@ -71,12 +265,21 @@
     display: flex;
     flex-direction: row;
     align-items: center;
+
+    @include big-tablet {
+      align-items: flex-start;
+    }
   }
 
   &__item:not(:last-child) {
+    position: relative;
     margin-right: 13px;
     padding-right: 20px;
-    position: relative;
+
+    @include mobile {
+      margin-right: 10px;
+      padding-right: 10px;
+    }
 
     &::after {
       content: '';
@@ -88,6 +291,12 @@
       transform: translateY(-50%) rotate(-45deg);
       border-bottom: 1px solid $white;
       border-right: 1px solid $white;
+
+      @include mobile {
+        width: 5px;
+        height: 5px;
+        transform: translateY(-10%) rotate(-45deg);
+      }
     }
   }
 
@@ -96,5 +305,35 @@
     line-height: 24px;
     font-weight: 300;
     color: $white;
+
+    @include big-desktop {
+      font-size: 18px;
+      line-height: 22px;
+    }
+
+    @include extra-desktop {
+      font-size: 1.25vw;
+    }
+
+    @include big-tablet {
+      font-size: 17px;
+      line-height: 20px;
+    }
+
+    @include small-tablet {
+      font-size: 15px;
+      line-height: 18px;
+    }
+
+    @include mobile {
+      font-size: 12px;
+      line-height: 15px;
+    }
+  }
+}
+
+.block {
+  @include big-tablet {
+    display: block;
   }
 }
