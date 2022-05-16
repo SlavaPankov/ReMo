@@ -168,30 +168,6 @@
   flex-direction: column;
   list-style: inside;
 
-  &__item {
-    font-size: 20px;
-    line-height: 23px;
-    font-weight: 400;
-    color: $dark-gray;
-    letter-spacing: .03em;
-
-    @include big-desktop {
-      font-size: 17px;
-      line-height: 20px;
-    }
-
-    @include small-tablet {
-      font-size: 13px;
-      line-height: 15px;
-    }
-
-    @include mobile {
-      margin-bottom: 0.5em;
-      font-size: 10px;
-      line-height: 12px;
-    }
-  }
-
   &__item:not(:last-child) {
     margin-bottom: 0.5em;
   }
@@ -264,4 +240,38 @@
 
 .accord-close .accordion-320__icon {
   transform: none;
+}
+
+.iblock-1__item ul {
+  display: inline-flex;
+  flex-direction: column;
+  list-style: inside;
+}
+
+.iblock-1__item ul li {
+  font-size: 20px;
+  line-height: 23px;
+  font-weight: 400;
+  color: $dark-gray;
+  letter-spacing: .03em;
+
+  @include big-desktop {
+    font-size: 17px;
+    line-height: 20px;
+  }
+
+  @include small-tablet {
+    font-size: 13px;
+    line-height: 15px;
+  }
+
+  @include mobile {
+    margin-bottom: 0.5em;
+    font-size: 10px;
+    line-height: 12px;
+  }
+}
+
+.iblock-1__item ul li:not(:last-child) {
+  margin-bottom: 0.5em;
 }

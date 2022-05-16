@@ -63,3 +63,11 @@
     margin-bottom: 0.5em;
   }
 }
+
+.iblock-4__item ul li {
+  @include services-card-item;
+}
+
+.iblock-4__item ul li:not(:last-child) {
+  margin-bottom: 0.5em;
+}

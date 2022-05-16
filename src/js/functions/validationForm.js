@@ -55,7 +55,6 @@ export function validationForm(form, selector) {
     .onSuccess(event => {
       let formData = new FormData(event.target);
       console.log('Валидация пройдена');
-      console.log(formData);
 
       let xhr = new XMLHttpRequest();
 
@@ -66,8 +65,11 @@ export function validationForm(form, selector) {
           }
         }
       }
-      // xhr.open('POST', '/integrationBitrix.php', true);
-      // xhr.send(formData);
+      const url = window.location.origin;
+      const urlSend = url + '/wp-admin/admin-ajax.php?action=callback_mail';
+
+      xhr.open('POST', urlSend, true);
+      xhr.send(formData);
 
       if (document.querySelector('.modal')) {
         document.querySelector('.modal__heading').remove();
