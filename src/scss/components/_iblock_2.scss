@@ -2,7 +2,7 @@
   background: url("../img/block-2.webp") right bottom no-repeat transparent;
 
   @include big-desktop {
-    background: url("../img/block-2-1440.webp") right bottom no-repeat transparent;
+    background: url("../img/block-2-1440.webp") right center no-repeat transparent;
   }
 
   @include big-tablet {

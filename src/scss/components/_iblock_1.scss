@@ -166,7 +166,7 @@
 .iblock-1-list {
   display: inline-flex;
   flex-direction: column;
-  list-style: inside;
+  list-style: disc;
 
   &__item:not(:last-child) {
     margin-bottom: 0.5em;
@@ -209,7 +209,7 @@
 
 .accordion-320 {
   @include mobile {
-    max-height: 200px;
+    max-height: fit-content;
     padding: 13px 10px;
     background-color: $blue-14;
     transition: max-height .3s ease-in-out;
@@ -242,13 +242,17 @@
   transform: none;
 }
 
-.iblock-1__item ul {
+.iblock-1__list-1 ul,
+.iblock-1__list-2 ul{
+  padding: 0 0 0 15px;
+  margin: 0;
   display: inline-flex;
   flex-direction: column;
-  list-style: inside;
+  list-style: disc;
 }
 
-.iblock-1__item ul li {
+.iblock-1__list-1 ul li,
+.iblock-1__list-2 ul li{
   font-size: 20px;
   line-height: 23px;
   font-weight: 400;

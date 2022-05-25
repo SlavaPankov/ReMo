@@ -24,7 +24,8 @@ html {
 }
 
 .site-container {
-  overflow: auto;
+  overflow-x: hidden;
+  overflow-y: auto;
 }
 
 
